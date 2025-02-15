@@ -4,7 +4,7 @@ import os
 app = Flask(__name__,template_folder=os.path.join(os.getcwd(),'/var/www/html'))
 @app.route('/')
 def index():
-	conn = sqlite3.connect("/home/traker/Desktop/zadanka/weather_data.db")
+	conn = sqlite3.connect("path/.db")
 	cursor = conn.cursor()
 	
 	cursor.execute("Select * from weather")
